@@ -1,0 +1,86 @@
+
+.menu
+{
+	position : fixed;
+	height : var(--menu-height);
+	background-color : var(--menu-color);
+	width : 100vw;
+	top : 0;
+	color : white;
+	display : flex;
+	box-shadow : 0px 0px 2px 0px black;
+	z-index: 1;
+
+	img
+	{
+		margin : 5px 10px;
+		margin-right : auto;
+	}
+}
+
+.menu_fixedSpacer
+{
+	height : var(--menu-height);
+	width : 100vw;
+}
+
+.menu_links
+{
+	display : flex;
+}
+
+.menu_link
+{
+  padding: 10px;
+  line-height: 46px;
+	cursor : pointer;
+	font-weight : 600;
+}
+
+
+.menu_spacer, .menu_opener
+{
+	display : none;
+}
+
+.menu_opener i
+{
+	font-size : 32px;
+	margin :16px;
+	cursor : pointer;
+}
+@media only screen and (max-width : 1024px)
+{
+	.menu_spacer, .menu_opener
+	{
+		display : initial;
+		width : 64px;
+	}
+	.menu img
+	{
+		margin-left : auto;
+	}
+
+	.menu_links
+	{
+		position : fixed;
+		top : var(--menu-height);
+		left : calc( 0px - var(--menu-mobile-width) );
+		width : var(--menu-mobile-width);
+		height : calc( 100vh - var(--menu-height) );
+		background-color : var(--menu-mobile-color);
+		flex-direction : column;
+		transition : all ease-in-out .5s;
+		padding-top : 10px;
+	}
+
+	.menu_open
+	{
+		left : 0px;
+	}
+
+	.menu_link
+	{
+		line-height : 30px;
+	}
+}

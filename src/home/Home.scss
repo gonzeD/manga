@@ -1,0 +1,35 @@
+.carousel .slide .legend
+{
+	bottom : 0px;
+	width : 100%;
+	left : 0;
+	border-radius : 0;
+	min-height : 80px;
+	margin : 0;
+	font-size : 25px;
+	opacity : 0.6;
+}
+.carousel .slide
+{
+	background : initial;
+}
+.carousel .slide img
+{
+	object-fit : contain;
+}
+
+.slide div
+{
+  height: 100%;
+}
+
+.carousel .control-dots .dot:focus
+{
+	outline : none;
+}
+
+
+.carousel, .slide, .slide-wrapper
+{
+	max-height : 50vh;
+}
