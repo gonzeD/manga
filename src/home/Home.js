@@ -18,15 +18,16 @@ export default class Home extends React.Component
 
 		<Carousel renderThumbs={() => {}} renderArrowPrev={() => {}} renderArrowNext={() => {}} showStatus={false} renderArrow autoPlay infiniteLoop useKeyboardArrows>
 				<div>
-						<img src="logo.png" />
+						<img src="ceremonie.jpg" alt="logo" />
 						<p className="legend">Legend 1</p>
 				</div>
 				<div>
-						<img src="logo.png" />
+						<img src="team.jpg" alt="logo" />
 						<p className="legend">Legend 2</p>
 				</div>
 				<div>
-						<img src="logo.png" />
+						<img src="actis.jpg" alt="logo" />
+
 						<p className="legend">Legend 3</p>
 				</div>
 		</Carousel>

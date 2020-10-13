@@ -1,0 +1,22 @@
+
+.mangatheque
+{
+}
+
+
+table
+{
+	width : 100%;
+	text-align : center;
+  border-collapse: collapse;
+}
+
+tr:not(:first-child)
+{
+	border-top : 1px solid #CCC;
+}
+
+tr
+{
+	height : 50px;
+}

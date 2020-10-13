@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from "./menu/Menu";
 import Home from "./home/Home";
+import Mangatheque from "./mangatheque/Mangatheque";
 import "./index.scss";
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 //import * as serviceWorker from './serviceWorker';
 
@@ -24,7 +24,7 @@ class App extends React.Component
 				<Menu/>
 	      <Switch>
 	        <Route path="/mangatheque">
-						about
+						<Mangatheque/>
 	        </Route>
 	        <Route path="/contact">
 						user

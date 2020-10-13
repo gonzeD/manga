@@ -3,6 +3,7 @@ html,body
 	margin : 0;
 	padding : 0;
 	font-family : arial;
+	background-color : red;
 }
 
 img
@@ -16,6 +17,18 @@ a
 	color : inherit;
 	text-decoration : inherit;
 }
+
+
+article
+{
+	max-width : 1000px;
+	min-height : calc( 100vh - calc( 20px + var( --menu-height) ) );
+	margin : auto;
+	background-color : white;
+	padding : 10px;
+}
+
+
 :root {
   --menu-height: 64px;
 	--menu-color : #000088;
