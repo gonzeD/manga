@@ -21,7 +21,8 @@ export default class Menu extends React.Component
 				</div>
 				<img src="logo.png" alt="Logo du kotmanga"/>
 				<div className="menu_spacer"/>
-				<div className={"menu_links "+(this.state.asideOpen?"menu_open":"")}>
+				<div className={"menu_shadow"+(this.state.asideOpen?" menu_shadowOpen":"")} onClick={() => this.setState({asideOpen : false})}></div>
+				<div className={"menu_links "+(this.state.asideOpen?"menu_open":"")} onBlur={() => this.setState({asideOpen : false})}>
 					{MenuData.map(x => <NavLink className="menu_link" to={x.link}>
 						{x.title}
 					</NavLink>)}

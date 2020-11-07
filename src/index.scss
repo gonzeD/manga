@@ -3,7 +3,15 @@ html,body
 	margin : 0;
 	padding : 0;
 	font-family : arial;
-	background-color : red;
+	background-image : url("/background.jpg");
+	 background-position: center;
+  background-attachment: fixed;
+	 background-size:cover;
+}
+
+html
+{
+	overflow-y: scroll;
 }
 
 img
@@ -31,7 +39,7 @@ article
 
 :root {
   --menu-height: 64px;
-	--menu-color : #000088;
+	--menu-color : white;
 	--menu-mobile-width : 200px;
-	--menu-mobile-color : red;
+	--menu-mobile-color : white;
 }

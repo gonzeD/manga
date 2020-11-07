@@ -4,9 +4,9 @@
 	position : fixed;
 	height : var(--menu-height);
 	background-color : var(--menu-color);
-	width : 100vw;
+	width : 100%;
 	top : 0;
-	color : white;
+	color : black;
 	display : flex;
 	box-shadow : 0px 0px 2px 0px black;
 	z-index: 1;
@@ -21,12 +21,13 @@
 .menu_fixedSpacer
 {
 	height : var(--menu-height);
-	width : 100vw;
+	width : 100%;
 }
 
 .menu_links
 {
 	display : flex;
+	margin-right: 10px;
 }
 
 .menu_link
@@ -49,6 +50,21 @@
 	margin :16px;
 	cursor : pointer;
 }
+
+.menu_shadow
+{
+	position : fixed;
+	width : 100vw;
+	height : 100vh;
+	top : var(--menu-height);
+	left : 0;
+	opacity : 0;
+	background-color:rgba(0,0,0,0.7);
+	pointer-events:none;
+	transition : all ease-in-out .5s;
+}
+
+
 @media only screen and (max-width : 1024px)
 {
 	.menu_spacer, .menu_opener
@@ -72,6 +88,14 @@
 		flex-direction : column;
 		transition : all ease-in-out .5s;
 		padding-top : 10px;
+		border-top : 1px solid grey;
+	}
+
+
+	.menu_shadowOpen
+	{
+		pointer-events:initial;
+		opacity : 1;
 	}
 
 	.menu_open
