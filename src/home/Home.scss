@@ -75,7 +75,8 @@
 		.home_postText
 		{
 			margin : 0 0 0 20px;
-
+			padding-bottom : 20px;
+			height: min-content;
 		}
 		.home_bottomLinks
 		{
@@ -115,10 +116,6 @@
 		border-bottom : none;
 	}
 
-	.home_postFull
-	{
-		max-height : 500px;
-	}
 }
 
 @media only screen and (max-width : 600px)
@@ -146,7 +143,6 @@
 		}
 		.home_postFull
 		{
-			max-height : 1000px;
 			img
 			{
 				width: 200px;

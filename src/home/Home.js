@@ -36,6 +36,16 @@ Notre twitch -> https://twitch.tv/kotmanga`,
 			}
 		]
 	}
+
+
+	componentDidMount()
+	{
+		var array = this.state.showPost;
+
+		array = array.map((x,i) => document.getElementById("home_post_"+i)?(document.getElementById("home_post_"+i).offsetHeight<200?null:x):null);
+
+		this.setState({showPost : array});
+	}
 	render()
 	{
 
@@ -58,12 +68,14 @@ Notre twitch -> https://twitch.tv/kotmanga`,
 							<p className="legend">Legend 3</p>
 					</div>
 			</Carousel>
+
+
 			<h1>Dernières nouvelles</h1>
 			<div className="home_posts">
 
-				{this.posts.map((x,key) => <div className={"home_post" + (this.state.showPost[key]?" home_postFull":"")}>
+				{this.posts.map((x,key) => <div className={"home_post" + (this.state.showPost[key]?" home_postFull":"")} style={{maxHeight:this.state.showPost[key]?document.getElementById("home_post_"+key).offsetHeight+10:200}}>
 						<img src={x.picture} alt="facebook img"/>
-						<div className="home_postText">
+						<div className="home_postText"  id={"home_post_"+key}>
 							{x.text.split('\n').map(function(item, key) {
 							  return (
 							    <span key={key}>
@@ -77,7 +89,10 @@ Notre twitch -> https://twitch.tv/kotmanga`,
 						<div className="home_bottomLinks">
 							<a href="https://test.com" target="_blank" rel="noopener noreferrer">Voir sur facebook</a>
 
-							<div className="home_seeMore"  onClick={() => this.setState({"showPost":this.state.showPost.map((x,i) => (i===key)?!x:x)})}>Voir {this.state.showPost[key]?"moins":"plus"}</div>
+							{this.state.showPost[key]!=null && <div className="home_seeMore"
+								onClick={() => this.setState({"showPost":this.state.showPost.map((x,i) => (i===key)?!x:x)})}>
+										Voir {this.state.showPost[key]?"moins":"plus"}
+							</div>}
 						</div>
 					</div>)
 				}
